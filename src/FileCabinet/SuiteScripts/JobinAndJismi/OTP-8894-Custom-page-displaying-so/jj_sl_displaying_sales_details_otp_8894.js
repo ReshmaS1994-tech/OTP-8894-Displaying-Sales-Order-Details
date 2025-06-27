@@ -130,14 +130,14 @@ define(["N/log", "N/search", "N/ui/serverWidget"], (log, search, serverWidget) =
        
         let taxCol = search.createColumn({
           name: 'formulacurrency',
-          summary: "SUM",
+          summary: "MAX",
           formula: "{taxtotal} / {currency.exchangerate}",
           label: "ConvertedTax"
         });
  
         let totalCol = search.createColumn({
           name: 'formulacurrency',
-          summary: "SUM",
+          summary: "MAX",
           formula: "{totalamount} / {currency.exchangerate}",
           label: "ConvertedTotal"
         });

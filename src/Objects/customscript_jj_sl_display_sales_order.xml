@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_jj_sl_display_sales_order">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>JJ SL Displaying Sales Order Details</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/jj_sl_displaying_sales_details_otp_8894.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_jj_sl_so_details">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole></runasrole>
+      <status>TESTING</status>
+      <title>JJ SL Displaying Sales Order Details</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

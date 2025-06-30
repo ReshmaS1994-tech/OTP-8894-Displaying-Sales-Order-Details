@@ -59,8 +59,8 @@ function (log, url) {
         let custStatus = curRecord.getValue({ fieldId: "cust_status" }) || " ";
       
         let suiteletUrl = url.resolveScript({
-          scriptId: "customscript_jj_sl_so_details_based_sta",
-          deploymentId: "customdeploy_jj_sl_so_details_stattask2",
+          scriptId: "customscript_jj_sl_display_sales_order",
+          deploymentId: "customdeploy_jj_sl_so_details",
           params: {
             customer_name: custCustomer,
             cust_status: custStatus,
@@ -76,13 +76,23 @@ function (log, url) {
       log.error("error..", error.message);
     }
   }
+  /**
+ * Redirects the user to the base Suitelet URL, effectively resetting all applied filters.
+ *
+ * This function is intended to be used as a client-side "Reset" button handler. It uses
+ * NetSuite's `url.resolveScript` API to reconstruct the Suitelet's base URL using the
+ * given script and deployment IDs, and then reloads the page.
+ *
+ * @function
+ * @returns {void}
+ */
 
   function onResetFilters() {
  
             try {
               var suiteletUrl = url.resolveScript({
-                scriptId: "customscript_jj_sl_so_details_based_sta",
-                deploymentId: "customdeploy_jj_sl_so_details_stattask2",
+                scriptId: "customscript_jj_sl_display_sales_order",
+                deploymentId: "customdeploy_jj_sl_so_details",
               });
               window.location.href = suiteletUrl;
             } catch (e) {
